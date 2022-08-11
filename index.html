@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NZ birds </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <nav>
+        <form id="filterForm">
+            <h1>Filter Birds</h1>
+            <div class="field">
+                <label for="name">Search by name</label>
+                <input type="text" id="name" name="name" placeholder="eg. Tuturuatu" />
+                <small></small>
+            </div>
+            <div class="field">
+                <label for="name">Search by family</label>
+                <input type="text" id="family" name="family" placeholder="eg. Strigopidae" />
+                <small></small>
+            </div>
+            <div class="field">
+                <label for="status">Conservation status</label>
+                <select id="status">
+                    <option value="Any">Any</option>
+                    <option value="Not Threatened">Not threatened</option>
+                    <option value="Naturally Uncommon">Naturally Uncommon</option>
+                    <option value="Relict">Relict</option>
+                    <option value="Declining">Declining</option>
+                    <option value="Nationally Increasing">Nationally Increasing</option>
+                    <option value="Nationally Vulnerable">Nationally Vulnerable</option>
+                    <option value="Nationally Endangered">Nationally Endangered</option>
+                    <option value="Nationally Critical">Nationally Critical</option>
+                    <option value="Extinct">Extinct</option>
+                    <option value="Data Deficient">Data Deficient</option>
+                  </select>
+                <small></small>
+            </div>
+
+            
+
+            <div class="field">
+                <label for="status">Sort by: </label>
+                <select id="sort">
+                    <option value="lengthLowHigh">Length (Low-to-high)</option>
+                    <option value="lengthHighLow">Length (High-to-low)</option>
+                    <option value="weightLowHigh">Weight(Low-to-high)</option>
+                    <option value="weightHighLow">Weight (High-to-low)</option>
+                  </select>
+                <small></small>
+            </div>
+            <button type="submit">Filter results</button>
+        </form>
+    </nav>
+    <main>
+        
+        
+        
+    </main>
+
+    <footer>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+main{
+    position: relative;
+    top: 100px;
+    left: 25%;
+    width: 75%;
+ background-color: white;
+display: flex;
+gap: 30px;
+flex-wrap: wrap;
+padding: 30px;
+justify-content: center;
+align-items: center;
+min-height: 100%;}
+
+header{
+    z-index: 4;
+    background-color: #2ec4b6;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+}
+
+nav{
+    top: 100px;
+    background-color: #cbf3f0;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+}
+
+
+article{
+    width: 400px;
+    height: 560px;
+    background-color:#FF9F1C;
+    
+    
+    
+}
+article p{
+    
+    margin: 5px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight:700;
+    
+}
+
+article p span{
+    font-weight: 100;
+}
+
+.image-half{
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    margin-bottom: 20px;
+    
+    
+}
+
+.image-half h1{
+    position: relative;
+    top: 80%;
+    left: 30px;
+    color: whitesmoke;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+}
+
+.status-banner{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: right;
+    position: relative;
+    right: 20px;
+    top: -40px;
+}
+
+
+
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    height: 100px;
+    background-color: black;
+}
