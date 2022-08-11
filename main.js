@@ -61,11 +61,34 @@ function createBirdElement(primaryName, englishName, scientificName, order, fami
 
 
 
+async function loadAllBirds(){
+    const body = document.querySelector('main');
+    body.innerHTML = "";
+    const BIRDS_URL = "nzbird.json";
+    let response = await fetch(BIRDS_URL);
+    if (!response.ok){
+		console.error("Failed: " + response.status); // error handling
+	}
+    let birds = await response.json();
+    for(let i = 0; i < birds.length; i++){
+        let otherNames = birds[i].other_names;
+        let otherNamesResult;
+            for(let x = 0; x < otherNames.length; x++){
+                otherNamesResult = otherNamesResult + otherNames[x] + ", ";
+            }
+            const lastIndexOfComma = otherNamesResult.lastIndexOf(',');
+            otherNamesResult= otherNamesResult.slice(0, lastIndexOfComma);
+            createBirdElement(birds[i].primary_name, birds[i].english_name, birds[i].scientific_name, birds[i].order, birds[i].family, otherNamesResult, birds[i].status, birds[i].photo.credit, birds[i].photo.source, birds[i].size.length.value, birds[i].size.length.units, birds[i].size.weight.value, birds[i].size.weight.units);
 
+        }
+        
+    
+}
 
 
 
 async function loadBirdElementsBySearch(query, status, sort, family){
+    console.log(query + status+ sort + family);
     const body = document.querySelector('main');
     body.innerHTML = "";
     const BIRDS_URL = "nzbird.json";
@@ -118,6 +141,7 @@ async function loadBirdElementsBySearch(query, status, sort, family){
         }
         
     }
+    
 }
 
 
@@ -141,7 +165,7 @@ filter.addEventListener('submit', (event) => {
 
 });
 
-
+loadAllBirds();
 
 
 
